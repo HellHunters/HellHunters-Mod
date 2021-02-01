@@ -1,7 +1,7 @@
 package com.hellhunters.testmod;
 
 import com.hellhunters.testmod.proxy.CommonProxy;
-import com.hellhunters.testmod.blocks.*;
+//import com.hellhunters.testmod.blocks.*;
 import com.hellhunters.testmod.items.*;
 
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,32 +22,29 @@ public class TestMod {
     public static final String VERSION = "0.0.0.1";
     public static final String NAME = "Test Mod";
 
-    public static final CreativeTabs tabTestMod = new CreativeTabs("Test Mod")
-    {
-        public ItemStack getTabIconItem()
-        {
-            return new ItemStack(ItemsRegistry.TEST);
-        }
-    }
+//  public static final CreativeTabs tabTestMod = new CreativeTabs("Test Mod")
+//    {
+//        public ItemStack getTabIconItem()
+//        {
+//            return new ItemStack(ItemsRegistry.TEST);
+//        }
+//    }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        // Преинициализация
         System.out.println("\u001B[32m" + "[Starting Test Mod PRE-INITIALIZATION]" + "\u001B[0m");
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // Инициализация
         System.out.println("\u001B[32m" + "[Starting Test Mod INITIALIZATION]" + "\u001B[0m");
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        // Инициализация
         System.out.println("\u001B[32m" + "[Starting Test Mod POST-INITIALIZATION]" + "\u001B[0m");
     }
 
