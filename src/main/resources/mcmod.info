@@ -1,0 +1,11 @@
+[
+{
+  "modid":"testmod",
+  "name":"Test Mod",
+  "description":"Mod description",
+  "version":"${version}",
+  "mcversion":"${mcversion}"
+  "authorList":["Hellamb","Asor1k"],
+  "credits":"HellHunters server"
+}
+]
