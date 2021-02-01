@@ -22,6 +22,7 @@ public class TestMod {
     public static final String VERSION = "0.0.0.1";
     public static final String NAME = "Test Mod";
 
+
 //  public static final CreativeTabs tabTestMod = new CreativeTabs("Test Mod")
 //    {
 //        public ItemStack getTabIconItem()
@@ -34,18 +35,21 @@ public class TestMod {
     public void preInit(FMLPreInitializationEvent event)
     {
         System.out.println("\u001B[32m" + "[Starting Test Mod PRE-INITIALIZATION]" + "\u001B[0m");
+        proxy.preInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
         System.out.println("\u001B[32m" + "[Starting Test Mod INITIALIZATION]" + "\u001B[0m");
+        proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
         System.out.println("\u001B[32m" + "[Starting Test Mod POST-INITIALIZATION]" + "\u001B[0m");
+        proxy.postInit(event);
     }
 
     @SidedProxy(clientSide = "com.hellhunters.testmod.proxy.ClientProxy", serverSide = "com.hellhunters.testmod.proxy.CommonProxy")
