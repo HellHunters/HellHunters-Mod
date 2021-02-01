@@ -32,6 +32,7 @@ public class ItemsRegistry
     @SideOnly(Side.CLIENT)
     public static void onRegistryModel(ModelRegistryEvent e)
     {
+        registryModel(TEST);
     }
 
     @SideOnly(Side.CLIENT)
