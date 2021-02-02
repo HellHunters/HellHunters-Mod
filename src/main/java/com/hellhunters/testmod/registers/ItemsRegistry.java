@@ -20,21 +20,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @Mod.EventBusSubscriber
 public class ItemsRegistry
 {
+    private static final Item.ToolMaterial TEST_MATERIAL = EnumHelper.addToolMaterial("testmod:tool", 2, 256, 50.0F, 2.0F, 12);
+
     @GameRegistry.ObjectHolder("test")
     public static final Item TEST = null;
-    public static final Item.ToolMaterial TEST_MATERIAL = EnumHelper.addToolMaterial("testmod:tool", 2, 256, 50.0F, 2.0F, 12);
 
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e)
     {
-      e.getRegistry().register(new ItemTest("test"));
-      e.getRegistry().register(new ToolPickaxe("testPickaxe", TEST_MATERIAL));
+        e.getRegistry().register(new ItemTest("test"));
+        e.getRegistry().register(new ToolPickaxe("testPickaxe", TEST_MATERIAL));
     }
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public static void onRegistryModel(ModelRegistryEvent e)
     {
+
         registryModel(TEST);
     }
 
@@ -45,6 +47,5 @@ public class ItemsRegistry
         final ModelResourceLocation mrl = new ModelResourceLocation(regName, "inventory");
         ModelBakery.registerItemVariants(item,mrl);
         ModelLoader.setCustomModelResourceLocation(item,0,mrl);
-
     }
 }
