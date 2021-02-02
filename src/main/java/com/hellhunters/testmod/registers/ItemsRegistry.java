@@ -22,22 +22,23 @@ public class ItemsRegistry
 {
     private static final Item.ToolMaterial TEST_MATERIAL = EnumHelper.addToolMaterial("testmod:tool", 2, 256, 50.0F, 2.0F, 12);
 
-    @GameRegistry.ObjectHolder("test")
+    //@GameRegistry.ObjectHolder("test")
     public static final Item TEST = null;
+    public static final Item TESTPICKAXE = null;
 
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e)
     {
         e.getRegistry().register(new ItemTest("test"));
-        e.getRegistry().register(new ToolPickaxe("testPickaxe", TEST_MATERIAL));
+        e.getRegistry().register(new ToolPickaxe("testpickaxe", TEST_MATERIAL));
     }
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public static void onRegistryModel(ModelRegistryEvent e)
     {
-
         registryModel(TEST);
+        registryModel(TESTPICKAXE);
     }
 
     @SideOnly(Side.CLIENT)
