@@ -1,9 +1,9 @@
 package com.hellhunters.testmod.items;
 
-import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemHoe;
 
-public class ToolPickaxe extends ItemPickaxe {
-    public ToolPickaxe(String name, ToolMaterial material)
+public class ToolHoeExample extends ItemHoe {
+    public ToolHoeExample(String name, ToolMaterial material)
     {
         super(material);
         this.setRegistryName(name);

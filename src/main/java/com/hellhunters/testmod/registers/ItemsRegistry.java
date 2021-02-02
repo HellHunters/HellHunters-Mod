@@ -25,12 +25,22 @@ public class ItemsRegistry
     //@GameRegistry.ObjectHolder("test")
     public static final Item TEST = null;
     public static final Item TESTPICKAXE = null;
+    public static final Item TESTAXE = null;
+    public static final Item TESTSHOVEL = null;
+    public static final Item TESTSWORD = null;
+    public static final Item TESTHOE = null;
+    public static final Item TESTFOOD = null;
 
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e)
     {
-        e.getRegistry().register(new ItemTest("test"));
-        e.getRegistry().register(new ToolPickaxe("testpickaxe", TEST_MATERIAL));
+        e.getRegistry().register(new ItemExample("test"));
+        e.getRegistry().register(new ToolPickaxeExample("testpickaxe", TEST_MATERIAL));
+        e.getRegistry().register(new ToolAxeExample("testaxe", TEST_MATERIAL,2,2));
+        e.getRegistry().register(new ToolShovelExample("testshovel", TEST_MATERIAL));
+        e.getRegistry().register(new ToolSwordExample("testsword", TEST_MATERIAL));
+        e.getRegistry().register(new ToolHoeExample("testhoe", TEST_MATERIAL));
+        e.getRegistry().register(new FoodExample("testfood", 5,50, true));
     }
 
     @SubscribeEvent
@@ -39,6 +49,11 @@ public class ItemsRegistry
     {
         registryModel(TEST);
         registryModel(TESTPICKAXE);
+        registryModel(TESTAXE);
+        registryModel(TESTSHOVEL);
+        registryModel(TESTSWORD);
+        registryModel(TESTHOE);
+        registryModel(TESTFOOD);
     }
 
     @SideOnly(Side.CLIENT)
