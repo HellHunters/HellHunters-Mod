@@ -1,4 +1,4 @@
-package com.hellhunters.testmod;
+package com.hellhunters.testmod.registers;
 
 import com.hellhunters.testmod.items.*;
 

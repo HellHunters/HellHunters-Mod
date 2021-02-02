@@ -1,5 +1,6 @@
-package com.hellhunters.testmod.blocks;
+package com.hellhunters.testmod.registers;
 
+import com.hellhunters.testmod.blocks.BlockBaseStone;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemModelMesher;
@@ -11,6 +12,7 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.xml.stream.Location;
 import java.util.Objects;
 
 public class BlocksRegister
@@ -19,6 +21,7 @@ public class BlocksRegister
 
     public static void register()
     {
+
         setRegister(BASE_STONE);
     }
 

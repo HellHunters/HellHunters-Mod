@@ -1,7 +1,6 @@
 package com.hellhunters.testmod.proxy;
 
-import com.hellhunters.testmod.blocks.BlocksRegister;
-import net.minecraftforge.fml.common.Mod.EventHandler;
+import com.hellhunters.testmod.registers.BlocksRegister;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
