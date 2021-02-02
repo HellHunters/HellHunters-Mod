@@ -4,6 +4,7 @@ import com.hellhunters.testmod.proxy.CommonProxy;
 //import com.hellhunters.testmod.blocks.*;
 import com.hellhunters.testmod.items.*;
 
+import com.hellhunters.testmod.registers.ItemsRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
@@ -23,13 +24,6 @@ public class TestMod {
     public static final String NAME = "Test Mod";
 
 
-//  public static final CreativeTabs tabTestMod = new CreativeTabs("Test Mod")
-//    {
-//        public ItemStack getTabIconItem()
-//        {
-//            return new ItemStack(ItemsRegistry.TEST);
-//        }
-//    }
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -52,7 +46,15 @@ public class TestMod {
         proxy.postInit(event);
     }
 
+
     @SidedProxy(clientSide = "com.hellhunters.testmod.proxy.ClientProxy", serverSide = "com.hellhunters.testmod.proxy.CommonProxy")
     public static CommonProxy proxy;
 
+    public static final CreativeTabs ModCreativeTab = new CreativeTabs("HellHunters")
+    {
+        public ItemStack getTabIconItem()
+        {
+            return new ItemStack(ItemsRegistry.UNHOLY_HORN);
+        }
+    };
 }

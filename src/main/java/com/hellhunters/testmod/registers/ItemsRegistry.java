@@ -31,6 +31,8 @@ public class ItemsRegistry
     public static final Item TESTHOE = null;
     public static final Item TESTFOOD = null;
 
+    public static final Item UNHOLY_HORN = null;
+
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e)
     {
@@ -41,6 +43,8 @@ public class ItemsRegistry
         e.getRegistry().register(new ToolSwordExample("testsword", TEST_MATERIAL));
         e.getRegistry().register(new ToolHoeExample("testhoe", TEST_MATERIAL));
         e.getRegistry().register(new FoodExample("testfood", 5,50, true));
+
+        e.getRegistry().register(new ItemExample("unholy_horn"));
     }
 
     @SubscribeEvent
@@ -54,6 +58,8 @@ public class ItemsRegistry
         registryModel(TESTSWORD);
         registryModel(TESTHOE);
         registryModel(TESTFOOD);
+
+        registryModel(UNHOLY_HORN);
     }
 
     @SideOnly(Side.CLIENT)

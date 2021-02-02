@@ -1,5 +1,6 @@
 package com.hellhunters.testmod.items;
 
+import com.hellhunters.testmod.TestMod;
 import net.minecraft.item.ItemFood;
 
 public class FoodExample extends ItemFood {
@@ -8,5 +9,6 @@ public class FoodExample extends ItemFood {
         super(amount, saturation, isWolfFood);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
+        this.setCreativeTab(TestMod.ModCreativeTab);
     }
 }

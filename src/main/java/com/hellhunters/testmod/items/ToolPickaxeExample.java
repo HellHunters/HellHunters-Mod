@@ -1,5 +1,6 @@
 package com.hellhunters.testmod.items;
 
+import com.hellhunters.testmod.TestMod;
 import net.minecraft.item.ItemPickaxe;
 
 public class ToolPickaxeExample extends ItemPickaxe {
@@ -8,5 +9,6 @@ public class ToolPickaxeExample extends ItemPickaxe {
         super(material);
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
+        this.setCreativeTab(TestMod.ModCreativeTab);
     }
 }

@@ -1,4 +1,10 @@
+itemGroup.HellHunters=HellHunters
 item.test.name=Test
 item.testpickaxe.name=Test Pickaxe
+item.testaxe.name=Test Axe
+item.testhoe.name=Test Hoe
+item.testshovel.name=Test Shovel
+item.testsword.name=Test Sword
 item.testfood.name=Test Food
+item.unholy_horn.name=Unholy horn
 tile.base_stone.name=Base Stone

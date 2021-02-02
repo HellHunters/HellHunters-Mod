@@ -1,5 +1,6 @@
 package com.hellhunters.testmod.blocks;
 
+import com.hellhunters.testmod.TestMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -23,6 +24,7 @@ public class BlockBaseStone extends Block
 
         this.setRegistryName(name);
         this.setUnlocalizedName(name);
+        this.setCreativeTab(TestMod.ModCreativeTab);
         System.out.println(this.getRegistryName());
         //this.setDefaultState(this.blockState.getBaseState().withProperty(UPPER,false));
     }

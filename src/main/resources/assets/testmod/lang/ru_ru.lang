@@ -1,4 +1,10 @@
+itemGroup.HellHunters=HellHunters
 item.test.name=Тест
 item.testpickaxe.name=Тестовая Кирка
-item.testfood.name=Тестовая еда
+item.testaxe.name=Тестовый Топор
+item.testhoe.name=Тестовоя Мотыга
+item.testshovel.name=Тестовоя Лопата
+item.testsword.name=Тестовый Меч
+item.testfood.name=Тестовая Еда
+item.unholy_horn.name=Нечестивый рог
 tile.base_stone.name=Базовый камень
