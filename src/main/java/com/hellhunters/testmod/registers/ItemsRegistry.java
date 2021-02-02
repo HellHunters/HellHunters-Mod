@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -21,11 +22,13 @@ public class ItemsRegistry
 {
     @GameRegistry.ObjectHolder("test")
     public static final Item TEST = null;
+    public static final Item.ToolMaterial TEST_MATERIAL = EnumHelper.addToolMaterial("testmod:tool", 2, 256, 50.0F, 2.0F, 12);
 
     @SubscribeEvent
     public static void onRegistryItem(RegistryEvent.Register<Item> e)
     {
-      e.getRegistry().registerAll(new ItemTest());
+      e.getRegistry().register(new ItemTest("test"));
+      e.getRegistry().register(new ToolPickaxe("testPickaxe", TEST_MATERIAL));
     }
 
     @SubscribeEvent
